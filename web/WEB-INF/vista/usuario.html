@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Spring 4 Security + Thymeleaf Integration Example</title>
+        <style>
+            body {
+                font-family: sans;
+                font-size: 1em;
+            }
+
+            p.error {
+                font-weight: bold;
+                color: red;
+            }
+
+            div.logout {
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Spring 4 Security + Thymeleaf Integration Example </h3>
+        Logged in user: <b th:inline="text"> [[${#httpServletRequest.remoteUser}]] </b>
+        <form th:action="@{/appLogout}" method="POST">
+            <input type="submit" value="Logout"/>
+
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Usuario</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                </tr>
+            </thead>
+            <tr th:each="usuario : ${lista}" th:object="${usuario}">
+
+                <td th:text="*{idUsuario}"></td>
+                <td>
+                    <form>
+                        <input type="text" name="userName" th:value="*{nombre}"/>
+                    </form>
+                </td>
+                <td th:text="*{nombre}" th:class="content"></td>
+                <td th:text="*{apellidos}"></td>
+            </tr>
+        </table>
+    </body>
+</html>   

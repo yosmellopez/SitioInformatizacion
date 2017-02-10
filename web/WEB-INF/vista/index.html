@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="bloques :: common_header(~{::title})">
+        <title>Inicio | Sitio Informatizacion</title>
+        <meta charset="utf-8" />
+    </head>
+    <body  id="page-top" data-spy="scroll" data-target=".navbar-custom">
+        <div id="wrapper">
+            <div th:insert="~{bloques :: navegacion}"></div>
+            <div th:insert="~{bloques :: introduccion}"></div>
+            <div th:insert="~{bloques :: servicios}"></div>
+            <div th:insert="~{bloques :: serviciosm}"></div>
+            <div th:insert="~{bloques :: nuestroservicios}"></div>
+            <div th:insert="~{bloques :: doctores}"></div>
+            <div th:insert="~{bloques :: footer}"></div>
+        </div>
+    </body>
+</html>

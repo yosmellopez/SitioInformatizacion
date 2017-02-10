@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SitioInformatizacion:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/SitioInformatizacion_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="SitioInformatizacion/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="SitioInformatizacion" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="Spring Framework 4.3" />
+          <element id="library" level="application" name="Spring Data JPA 1.10" />
+          <element id="library" level="application" name="Hibernate 5.2" />
+          <element id="library" level="application" name="Thymeleaf 3.0" />
+          <element id="library" level="application" name="Spring Security 4.2" />
+          <element id="library" level="application" name="Postgres Driver" />
+          <element id="library" level="application" name="Aspectos" />
+          <element id="library" level="application" name="Classmate" />
+          <element id="library" level="application" name="Jackson Json 2.8" />
+          <element id="library" level="application" name="Log4" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

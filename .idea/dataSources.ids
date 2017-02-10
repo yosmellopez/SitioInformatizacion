@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="PostgreSQL - informatizacion@localhost" uuid="b75787e9-d6ac-4899-b683-1ccabe00c6b1">
+    <database-info product="PostgreSQL" version="9.4.1" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4.1208">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.5">
+      <database id="1" name="informatizacion"/>
+      <schema id="2" parent="1" name="public">
+        <object-id>2200</object-id>
+        <comment>standard public schema</comment>
+        <introspection-state-number>1245</introspection-state-number>
+        <introspection-timestamp>2017-01-14.23:44:18.352</introspection-timestamp>
+      </schema>
+      <sequence id="3" parent="2" name="archivo_id_archivo_seq">
+        <object-id>24577</object-id>
+        <state-number>1233</state-number>
+      </sequence>
+      <sequence id="4" parent="2" name="red_social_id_red_social_seq">
+        <object-id>24588</object-id>
+        <state-number>1234</state-number>
+      </sequence>
+      <sequence id="5" parent="2" name="rol_id_rol_seq">
+        <object-id>24599</object-id>
+        <state-number>1235</state-number>
+      </sequence>
+      <sequence id="6" parent="2" name="servicio_id_servicio_seq">
+        <object-id>24607</object-id>
+        <state-number>1236</state-number>
+      </sequence>
+      <sequence id="7" parent="2" name="trabajador_id_trabajador_seq">
+        <object-id>24618</object-id>
+        <state-number>1237</state-number>
+      </sequence>
+      <sequence id="8" parent="2" name="usuario_id_usuario_seq">
+        <object-id>24634</object-id>
+        <state-number>1239</state-number>
+      </sequence>
+      <sequence id="9" parent="2" name="video_id_video_seq">
+        <object-id>24645</object-id>
+        <state-number>1240</state-number>
+      </sequence>
+      <table id="10" parent="2" name="archivo">
+        <object-id>24579</object-id>
+        <state-number>1233</state-number>
+      </table>
+      <table id="11" parent="2" name="red_social">
+        <object-id>24590</object-id>
+        <state-number>1243</state-number>
+      </table>
+      <table id="12" parent="2" name="rol">
+        <object-id>24601</object-id>
+        <state-number>1245</state-number>
+      </table>
+      <table id="13" parent="2" name="servicio">
+        <object-id>24609</object-id>
+        <state-number>1236</state-number>
+      </table>
+      <table id="14" parent="2" name="trabajador">
+        <object-id>24620</object-id>
+        <state-number>1244</state-number>
+      </table>
+      <table id="15" parent="2" name="trabajador_red_social">
+        <object-id>24629</object-id>
+        <state-number>1244</state-number>
+      </table>
+      <table id="16" parent="2" name="usuario">
+        <object-id>24636</object-id>
+        <state-number>1245</state-number>
+      </table>
+      <table id="17" parent="2" name="video">
+        <object-id>24647</object-id>
+        <state-number>1240</state-number>
+      </table>
+      <column id="18" parent="10" name="id_archivo">
+        <state-number>1233</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;archivo_id_archivo_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="19" parent="10" name="fecha">
+        <state-number>1233</state-number>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="20" parent="10" name="nombre">
+        <state-number>1233</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="21" parent="10" name="ruta">
+        <state-number>1233</state-number>
+        <data-type>varchar(1000000)</data-type>
+      </column>
+      <column id="22" parent="10" name="tamano">
+        <state-number>1233</state-number>
+        <data-type>double precision</data-type>
+      </column>
+      <column id="23" parent="10" name="tipo">
+        <state-number>1233</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <index id="24" parent="10" name="archivo_pkey">
+        <object-id>24586</object-id>
+        <columns>id_archivo</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="25" parent="10" name="archivo_pkey">
+        <columns>id_archivo</columns>
+        <underlying-index>archivo_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="26" parent="11" name="id_red_social">
+        <state-number>1234</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;red_social_id_red_social_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="27" parent="11" name="direccion_red">
+        <state-number>1234</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="28" parent="11" name="nombre_red">
+        <state-number>1234</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="29" parent="11" name="red_social_pkey">
+        <object-id>24597</object-id>
+        <columns>id_red_social</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="30" parent="11" name="red_social_pkey">
+        <columns>id_red_social</columns>
+        <underlying-index>red_social_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="31" parent="12" name="id_rol">
+        <state-number>1235</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;rol_id_rol_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="32" parent="12" name="nombre">
+        <state-number>1235</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="33" parent="12" name="rol_pkey">
+        <object-id>24605</object-id>
+        <columns>id_rol</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="34" parent="12" name="rol_pkey">
+        <columns>id_rol</columns>
+        <underlying-index>rol_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="35" parent="13" name="id_servicio">
+        <state-number>1236</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;servicio_id_servicio_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="36" parent="13" name="descripcion">
+        <state-number>1236</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="37" parent="13" name="fecha_publicacion">
+        <state-number>1236</state-number>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="38" parent="13" name="imagen">
+        <state-number>1236</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="39" parent="13" name="nombre">
+        <state-number>1236</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="40" parent="13" name="publicado">
+        <state-number>1236</state-number>
+        <data-type>boolean</data-type>
+      </column>
+      <index id="41" parent="13" name="servicio_pkey">
+        <object-id>24616</object-id>
+        <columns>id_servicio</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="42" parent="13" name="servicio_pkey">
+        <columns>id_servicio</columns>
+        <underlying-index>servicio_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="43" parent="14" name="id_trabajador">
+        <state-number>1237</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;trabajador_id_trabajador_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="44" parent="14" name="apellidos">
+        <state-number>1237</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="45" parent="14" name="area_atiende">
+        <state-number>1237</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="46" parent="14" name="cargo">
+        <state-number>1237</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="47" parent="14" name="correo">
+        <state-number>1237</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="48" parent="14" name="imagen">
+        <state-number>1237</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="49" parent="14" name="nombre">
+        <state-number>1237</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="50" parent="14" name="telefono">
+        <state-number>1237</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="51" parent="14" name="trabajador_pkey">
+        <object-id>24627</object-id>
+        <columns>id_trabajador</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="52" parent="14" name="trabajador_pkey">
+        <columns>id_trabajador</columns>
+        <underlying-index>trabajador_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="53" parent="15" name="id_red_social">
+        <state-number>1238</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="54" parent="15" name="id_trabajador">
+        <state-number>1238</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="55" parent="15" name="direccion">
+        <state-number>1238</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="56" parent="15" name="trabajador_red_social_pkey">
+        <object-id>24632</object-id>
+        <columns>id_red_social
+id_trabajador</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="57" parent="15" name="trabajador_red_social_pkey">
+        <columns>id_red_social
+id_trabajador</columns>
+        <underlying-index>trabajador_red_social_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="58" parent="15" name="fk_red_social_trabajador">
+        <columns>id_red_social</columns>
+        <ref-key>~.red_social.red_social_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="59" parent="15" name="fk_trabajador_red_social">
+        <columns>id_trabajador</columns>
+        <ref-key>~.trabajador.trabajador_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="60" parent="16" name="id_usuario">
+        <state-number>1239</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;usuario_id_usuario_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="61" parent="16" name="apellidos">
+        <state-number>1239</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="62" parent="16" name="contrasena">
+        <state-number>1239</state-number>
+        <data-type>varchar(512)</data-type>
+      </column>
+      <column id="63" parent="16" name="nombre">
+        <state-number>1239</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="64" parent="16" name="recoger_barra">
+        <state-number>1239</state-number>
+        <data-type>boolean</data-type>
+      </column>
+      <column id="65" parent="16" name="ultimo_inicio">
+        <state-number>1239</state-number>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="66" parent="16" name="usuario">
+        <state-number>1239</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="67" parent="16" name="id_rol">
+        <state-number>1239</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <index id="68" parent="16" name="usuario_pkey">
+        <object-id>24643</object-id>
+        <columns>id_usuario</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="69" parent="16" name="nombre_apellidos_unico">
+        <object-id>24658</object-id>
+        <columns>nombre
+apellidos</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="70" parent="16" name="usuario_unico">
+        <object-id>24656</object-id>
+        <columns>usuario</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="71" parent="16" name="usuario_pkey">
+        <columns>id_usuario</columns>
+        <underlying-index>usuario_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <key id="72" parent="16" name="nombre_apellidos_unico">
+        <columns>nombre
+apellidos</columns>
+        <underlying-index>nombre_apellidos_unico</underlying-index>
+      </key>
+      <key id="73" parent="16" name="usuario_unico">
+        <columns>usuario</columns>
+        <underlying-index>usuario_unico</underlying-index>
+      </key>
+      <foreign-key id="74" parent="16" name="fk_usuario_rol">
+        <columns>id_rol</columns>
+        <ref-key>~.rol.rol_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="75" parent="17" name="id_video">
+        <state-number>1240</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;video_id_video_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="76" parent="17" name="descripcion">
+        <state-number>1240</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="77" parent="17" name="direccion">
+        <state-number>1240</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="78" parent="17" name="fecha_publicacion">
+        <state-number>1240</state-number>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="79" parent="17" name="nombre">
+        <state-number>1240</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="80" parent="17" name="publicado">
+        <state-number>1240</state-number>
+        <data-type>boolean</data-type>
+      </column>
+      <index id="81" parent="17" name="video_pkey">
+        <object-id>24654</object-id>
+        <columns>id_video</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="82" parent="17" name="video_pkey">
+        <columns>id_video</columns>
+        <underlying-index>video_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
