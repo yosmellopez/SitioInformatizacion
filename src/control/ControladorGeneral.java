@@ -19,6 +19,7 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 import utiles.MapeadorObjetos;
 
 import javax.servlet.http.HttpServletRequest;
+import jpaSpringData.ResolucionJpa;
 
 import jpaSpringData.UsuarioJpa;
 
@@ -30,6 +31,9 @@ public class ControladorGeneral {
 
     @Autowired
     ServicioJpa servicioJpa;
+
+    @Autowired
+    ResolucionJpa resolucionJpa;
 
     @Autowired
     MapeadorObjetos mapeadorObjetos;
@@ -44,6 +48,7 @@ public class ControladorGeneral {
     public ModelAndView index(ModelMap modelMap) {
         modelMap.put("servicios", servicioJpa.findAll(new PageRequest(0, 3)));
         modelMap.put("servicios1", servicioJpa.findAll(new PageRequest(1, 3)));
+        modelMap.put("resoluciones", resolucionJpa.findAll(new PageRequest(0, 4)));
         return new ModelAndView("index", modelMap);
     }
 
