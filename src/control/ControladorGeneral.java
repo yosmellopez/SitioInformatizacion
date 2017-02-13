@@ -22,6 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import jpaSpringData.ResolucionJpa;
 
 import jpaSpringData.UsuarioJpa;
+import jpaSpringData.VideoJpa;
 
 @Controller
 public class ControladorGeneral {
@@ -31,6 +32,9 @@ public class ControladorGeneral {
 
     @Autowired
     ServicioJpa servicioJpa;
+
+    @Autowired
+    VideoJpa videoJpa;
 
     @Autowired
     ResolucionJpa resolucionJpa;
@@ -48,7 +52,8 @@ public class ControladorGeneral {
     public ModelAndView index(ModelMap modelMap) {
         modelMap.put("servicios", servicioJpa.findAll(new PageRequest(0, 3)));
         modelMap.put("servicios1", servicioJpa.findAll(new PageRequest(1, 3)));
-        modelMap.put("resoluciones", resolucionJpa.findAll(new PageRequest(0, 4)));
+        modelMap.put("resoluciones", resolucionJpa.findAll());
+        modelMap.put("videos", videoJpa.findAll());
         return new ModelAndView("index", modelMap);
     }
 

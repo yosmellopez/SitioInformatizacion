@@ -45,8 +45,8 @@ public class ConfiguracionWeb extends WebMvcConfigurerAdapter implements Applica
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/plantilla/**", "/img/**", "/icons/**", "/font/**", "/fonts/**", "/flaty/**", "/docs/**", "/app/**", "/theme-classic/**", "/recursos/**")
-                .addResourceLocations("/plantilla/", "/img/", "/icons/", "/font/", "/fonts/", "/flaty/", "/docs/", "/app/", "/theme-classic/", "/recursos/")
+        registry.addResourceHandler("/videos/**", "/plantilla/**", "/img/**", "/icons/**", "/font/**", "/fonts/**", "/flaty/**", "/docs/**", "/app/**", "/theme-classic/**", "/recursos/**")
+                .addResourceLocations("/videos/", "/plantilla/", "/img/", "/icons/", "/font/", "/fonts/", "/flaty/", "/docs/", "/app/", "/theme-classic/", "/recursos/")
                 .setCacheControl(CacheControl.noCache());
     }
 //
