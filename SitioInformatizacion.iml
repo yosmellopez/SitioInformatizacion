@@ -19,6 +19,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
+          <factory-entry name="Entities" />
           <factory-entry name="entityManagerFactory" value="b75787e9-d6ac-4899-b683-1ccabe00c6b1" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
@@ -32,17 +33,16 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Spring Framework 4.3" level="application" />
-    <orderEntry type="library" name="Spring Security 4.2" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.0.391" level="application_server_libraries" />
-    <orderEntry type="library" name="Spring Data JPA 1.10" level="application" />
-    <orderEntry type="library" name="Spring Framework 4.3" level="application" />
-    <orderEntry type="library" name="Hibernate 5.2" level="application" />
-    <orderEntry type="library" name="Thymeleaf 3.0" level="application" />
-    <orderEntry type="library" name="Postgres Driver" level="application" />
+    <orderEntry type="library" exported="" name="Thymeleaf 3.0.3" level="application" />
+    <orderEntry type="library" name="Java Mail" level="application" />
     <orderEntry type="library" name="Aspectos" level="application" />
-    <orderEntry type="library" name="Classmate" level="application" />
-    <orderEntry type="library" name="Jackson Json 2.8" level="application" />
-    <orderEntry type="library" name="Log4" level="application" />
+    <orderEntry type="library" name="Hibernate 5.2.5" level="application" />
+    <orderEntry type="library" name="Spring Framework 4.3.4" level="application" />
+    <orderEntry type="library" name="Jackson Json 2.8.5" level="application" />
+    <orderEntry type="library" name="Spring Security 4.2.1" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.11" level="application_server_libraries" />
+    <orderEntry type="library" name="Spring Data JPA 1.10.5" level="application" />
+    <orderEntry type="library" name="Postgresql 9.4" level="application" />
+    <orderEntry type="library" name="Jasper Reports 6.3.1" level="application" />
   </component>
 </module>

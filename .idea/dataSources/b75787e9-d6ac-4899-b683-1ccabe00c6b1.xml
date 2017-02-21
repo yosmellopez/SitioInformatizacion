@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="PostgreSQL - informatizacion@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.0">
+    <root id="1"/>
+    <database id="2" parent="1" name="informatizacion">
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <IntrospectionTimestamp>2017-01-14.23:44:18.352</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1245</IntrospectionStateNumber>
+      <Visible>1</Visible>
+    </schema>
+    <sequence id="4" parent="3" name="archivo_id_archivo_seq">
+      <ObjectId>24577</ObjectId>
+      <StateNumber>1233</StateNumber>
+    </sequence>
+    <sequence id="5" parent="3" name="red_social_id_red_social_seq">
+      <ObjectId>24588</ObjectId>
+      <StateNumber>1234</StateNumber>
+    </sequence>
+    <sequence id="6" parent="3" name="rol_id_rol_seq">
+      <ObjectId>24599</ObjectId>
+      <StateNumber>1235</StateNumber>
+    </sequence>
+    <sequence id="7" parent="3" name="servicio_id_servicio_seq">
+      <ObjectId>24607</ObjectId>
+      <StateNumber>1236</StateNumber>
+    </sequence>
+    <sequence id="8" parent="3" name="trabajador_id_trabajador_seq">
+      <ObjectId>24618</ObjectId>
+      <StateNumber>1237</StateNumber>
+    </sequence>
+    <sequence id="9" parent="3" name="usuario_id_usuario_seq">
+      <ObjectId>24634</ObjectId>
+      <StateNumber>1239</StateNumber>
+    </sequence>
+    <sequence id="10" parent="3" name="video_id_video_seq">
+      <ObjectId>24645</ObjectId>
+      <StateNumber>1240</StateNumber>
+    </sequence>
+    <table id="11" parent="3" name="archivo">
+      <ObjectId>24579</ObjectId>
+      <StateNumber>1233</StateNumber>
+    </table>
+    <table id="12" parent="3" name="red_social">
+      <ObjectId>24590</ObjectId>
+      <StateNumber>1243</StateNumber>
+    </table>
+    <table id="13" parent="3" name="rol">
+      <ObjectId>24601</ObjectId>
+      <StateNumber>1245</StateNumber>
+    </table>
+    <table id="14" parent="3" name="servicio">
+      <ObjectId>24609</ObjectId>
+      <StateNumber>1236</StateNumber>
+    </table>
+    <table id="15" parent="3" name="trabajador">
+      <ObjectId>24620</ObjectId>
+      <StateNumber>1244</StateNumber>
+    </table>
+    <table id="16" parent="3" name="trabajador_red_social">
+      <ObjectId>24629</ObjectId>
+      <StateNumber>1244</StateNumber>
+    </table>
+    <table id="17" parent="3" name="usuario">
+      <ObjectId>24636</ObjectId>
+      <StateNumber>1245</StateNumber>
+    </table>
+    <table id="18" parent="3" name="video">
+      <ObjectId>24647</ObjectId>
+      <StateNumber>1240</StateNumber>
+    </table>
+    <column id="19" parent="11" name="id_archivo">
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1233</StateNumber>
+      <DefaultExpression>nextval(&apos;archivo_id_archivo_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="20" parent="11" name="fecha">
+      <DataType>timestamp|0</DataType>
+      <StateNumber>1233</StateNumber>
+    </column>
+    <column id="21" parent="11" name="nombre">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1233</StateNumber>
+    </column>
+    <column id="22" parent="11" name="ruta">
+      <DataType>varchar(1000000)|0</DataType>
+      <StateNumber>1233</StateNumber>
+    </column>
+    <column id="23" parent="11" name="tamano">
+      <DataType>double precision|0</DataType>
+      <StateNumber>1233</StateNumber>
+    </column>
+    <column id="24" parent="11" name="tipo">
+      <DataType>integer|0</DataType>
+      <StateNumber>1233</StateNumber>
+    </column>
+    <index id="25" parent="11" name="archivo_pkey">
+      <ObjectId>24586</ObjectId>
+      <ColNames>id_archivo</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="26" parent="11" name="archivo_pkey">
+      <ColNames>id_archivo</ColNames>
+      <UnderlyingIndexName>archivo_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="12" name="id_red_social">
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1234</StateNumber>
+      <DefaultExpression>nextval(&apos;red_social_id_red_social_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="28" parent="12" name="direccion_red">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1234</StateNumber>
+    </column>
+    <column id="29" parent="12" name="nombre_red">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1234</StateNumber>
+    </column>
+    <index id="30" parent="12" name="red_social_pkey">
+      <ObjectId>24597</ObjectId>
+      <ColNames>id_red_social</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="31" parent="12" name="red_social_pkey">
+      <ColNames>id_red_social</ColNames>
+      <UnderlyingIndexName>red_social_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="32" parent="13" name="id_rol">
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1235</StateNumber>
+      <DefaultExpression>nextval(&apos;rol_id_rol_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="33" parent="13" name="nombre">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1235</StateNumber>
+    </column>
+    <index id="34" parent="13" name="rol_pkey">
+      <ObjectId>24605</ObjectId>
+      <ColNames>id_rol</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="35" parent="13" name="rol_pkey">
+      <ColNames>id_rol</ColNames>
+      <UnderlyingIndexName>rol_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="14" name="id_servicio">
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1236</StateNumber>
+      <DefaultExpression>nextval(&apos;servicio_id_servicio_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="37" parent="14" name="descripcion">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1236</StateNumber>
+    </column>
+    <column id="38" parent="14" name="fecha_publicacion">
+      <DataType>timestamp|0</DataType>
+      <StateNumber>1236</StateNumber>
+    </column>
+    <column id="39" parent="14" name="imagen">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1236</StateNumber>
+    </column>
+    <column id="40" parent="14" name="nombre">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1236</StateNumber>
+    </column>
+    <column id="41" parent="14" name="publicado">
+      <DataType>boolean|0</DataType>
+      <StateNumber>1236</StateNumber>
+    </column>
+    <index id="42" parent="14" name="servicio_pkey">
+      <ObjectId>24616</ObjectId>
+      <ColNames>id_servicio</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="43" parent="14" name="servicio_pkey">
+      <ColNames>id_servicio</ColNames>
+      <UnderlyingIndexName>servicio_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="15" name="id_trabajador">
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1237</StateNumber>
+      <DefaultExpression>nextval(&apos;trabajador_id_trabajador_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="45" parent="15" name="apellidos">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1237</StateNumber>
+    </column>
+    <column id="46" parent="15" name="area_atiende">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1237</StateNumber>
+    </column>
+    <column id="47" parent="15" name="cargo">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1237</StateNumber>
+    </column>
+    <column id="48" parent="15" name="correo">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1237</StateNumber>
+    </column>
+    <column id="49" parent="15" name="imagen">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1237</StateNumber>
+    </column>
+    <column id="50" parent="15" name="nombre">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1237</StateNumber>
+    </column>
+    <column id="51" parent="15" name="telefono">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1237</StateNumber>
+    </column>
+    <index id="52" parent="15" name="trabajador_pkey">
+      <ObjectId>24627</ObjectId>
+      <ColNames>id_trabajador</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="53" parent="15" name="trabajador_pkey">
+      <ColNames>id_trabajador</ColNames>
+      <UnderlyingIndexName>trabajador_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="54" parent="16" name="id_red_social">
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1238</StateNumber>
+    </column>
+    <column id="55" parent="16" name="id_trabajador">
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1238</StateNumber>
+    </column>
+    <column id="56" parent="16" name="direccion">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1238</StateNumber>
+    </column>
+    <index id="57" parent="16" name="trabajador_red_social_pkey">
+      <ObjectId>24632</ObjectId>
+      <ColNames>id_red_social
+id_trabajador</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="58" parent="16" name="trabajador_red_social_pkey">
+      <ColNames>id_red_social
+id_trabajador</ColNames>
+      <UnderlyingIndexName>trabajador_red_social_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="59" parent="16" name="fk_red_social_trabajador">
+      <ColNames>id_red_social</ColNames>
+      <RefTableName>red_social</RefTableName>
+      <RefKeyName>red_social_pkey</RefKeyName>
+      <RefColNames>id_red_social</RefColNames>
+    </foreign-key>
+    <foreign-key id="60" parent="16" name="fk_trabajador_red_social">
+      <ColNames>id_trabajador</ColNames>
+      <RefTableName>trabajador</RefTableName>
+      <RefKeyName>trabajador_pkey</RefKeyName>
+      <RefColNames>id_trabajador</RefColNames>
+    </foreign-key>
+    <column id="61" parent="17" name="id_usuario">
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1239</StateNumber>
+      <DefaultExpression>nextval(&apos;usuario_id_usuario_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="62" parent="17" name="apellidos">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1239</StateNumber>
+    </column>
+    <column id="63" parent="17" name="contrasena">
+      <DataType>varchar(512)|0</DataType>
+      <StateNumber>1239</StateNumber>
+    </column>
+    <column id="64" parent="17" name="nombre">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1239</StateNumber>
+    </column>
+    <column id="65" parent="17" name="recoger_barra">
+      <DataType>boolean|0</DataType>
+      <StateNumber>1239</StateNumber>
+    </column>
+    <column id="66" parent="17" name="ultimo_inicio">
+      <DataType>timestamp|0</DataType>
+      <StateNumber>1239</StateNumber>
+    </column>
+    <column id="67" parent="17" name="usuario">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1239</StateNumber>
+    </column>
+    <column id="68" parent="17" name="id_rol">
+      <DataType>integer|0</DataType>
+      <StateNumber>1239</StateNumber>
+    </column>
+    <index id="69" parent="17" name="usuario_pkey">
+      <ObjectId>24643</ObjectId>
+      <ColNames>id_usuario</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="70" parent="17" name="nombre_apellidos_unico">
+      <ObjectId>24658</ObjectId>
+      <ColNames>nombre
+apellidos</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="71" parent="17" name="usuario_unico">
+      <ObjectId>24656</ObjectId>
+      <ColNames>usuario</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="72" parent="17" name="usuario_pkey">
+      <ColNames>id_usuario</ColNames>
+      <UnderlyingIndexName>usuario_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="73" parent="17" name="nombre_apellidos_unico">
+      <ColNames>nombre
+apellidos</ColNames>
+      <UnderlyingIndexName>nombre_apellidos_unico</UnderlyingIndexName>
+    </key>
+    <key id="74" parent="17" name="usuario_unico">
+      <ColNames>usuario</ColNames>
+      <UnderlyingIndexName>usuario_unico</UnderlyingIndexName>
+    </key>
+    <foreign-key id="75" parent="17" name="fk_usuario_rol">
+      <ColNames>id_rol</ColNames>
+      <RefTableName>rol</RefTableName>
+      <RefKeyName>rol_pkey</RefKeyName>
+      <RefColNames>id_rol</RefColNames>
+    </foreign-key>
+    <column id="76" parent="18" name="id_video">
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1240</StateNumber>
+      <DefaultExpression>nextval(&apos;video_id_video_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="77" parent="18" name="descripcion">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1240</StateNumber>
+    </column>
+    <column id="78" parent="18" name="direccion">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1240</StateNumber>
+    </column>
+    <column id="79" parent="18" name="fecha_publicacion">
+      <DataType>timestamp|0</DataType>
+      <StateNumber>1240</StateNumber>
+    </column>
+    <column id="80" parent="18" name="nombre">
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1240</StateNumber>
+    </column>
+    <column id="81" parent="18" name="publicado">
+      <DataType>boolean|0</DataType>
+      <StateNumber>1240</StateNumber>
+    </column>
+    <index id="82" parent="18" name="video_pkey">
+      <ObjectId>24654</ObjectId>
+      <ColNames>id_video</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="83" parent="18" name="video_pkey">
+      <ColNames>id_video</ColNames>
+      <UnderlyingIndexName>video_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

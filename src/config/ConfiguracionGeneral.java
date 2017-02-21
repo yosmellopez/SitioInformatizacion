@@ -18,8 +18,6 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import utiles.DireccionServidor;
-import utiles.EncriptadorContrasena;
 import utiles.MapeadorObjetos;
 import utiles.ServicioInicio;
 

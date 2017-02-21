@@ -31,6 +31,9 @@ public class Resolucion implements Serializable {
     @Column(name = "descripcion")
     private String descripcion;
 
+    @Column(name = "resumen")
+    private String resumen;
+
     @Column(name = "publicada")
     private Boolean publicada;
 
@@ -87,6 +90,14 @@ public class Resolucion implements Serializable {
 
     public String getClases() {
         return clases;
+    }
+
+    public void setResumen(String resumen) {
+        this.resumen = resumen;
+    }
+
+    public String getResumen() {
+        return resumen;
     }
 
     @Override

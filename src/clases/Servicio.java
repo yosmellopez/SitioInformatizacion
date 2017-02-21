@@ -38,6 +38,9 @@ public class Servicio implements Serializable {
     @Column(name = "icono")
     private String icono;
 
+    @Column(name = "ruta")
+    private String ruta;
+
     @Column(name = "publicado")
     private Boolean publicado;
 
@@ -108,6 +111,14 @@ public class Servicio implements Serializable {
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
+    }
+
+    public String getRuta() {
+        return ruta;
+    }
+
+    public void setRuta(String ruta) {
+        this.ruta = ruta;
     }
 
     @Override

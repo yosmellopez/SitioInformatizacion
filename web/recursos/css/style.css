@@ -147,8 +147,7 @@ h1.font-light,h2.font-light,h3.font-light,h4.font-light,h5.font-light,h6.font-li
 }
 
 p {
-    margin: 0 0 20px;
-
+    margin: 0 0 8px;
 }
 
 p.medium {
@@ -926,7 +925,7 @@ form.lead label,form.lead input {
  call action
 ==================================== */
 .callaction {
-    padding:30px 30px 20px 30px;
+    padding:30px 30px 20px 0;
     border-radius: 4px;
     border-bottom: 2px solid #f2f2f2;
 }
@@ -1138,6 +1137,7 @@ p .alineado{
 
 .item {
     margin: 10px;
+    text-align: center;
 }
 
 .item img {
@@ -1151,7 +1151,7 @@ Testimonial
 =========================== */
 
 #testimonial {
-    background-image: url(../img/parallax/1.jpg);
+    background: #262932;
 }
 
 .carousel-control.left,.carousel-control.right  {background:none;width:25px; z-index: 999;}
@@ -1284,6 +1284,7 @@ Testimonial
     padding-left: 0;
     width: 100%;
     height: auto;
+    text-align: center;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {

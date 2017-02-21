@@ -18,6 +18,15 @@
           <element id="library" level="application" name="Classmate" />
           <element id="library" level="application" name="Jackson Json 2.8" />
           <element id="library" level="application" name="Log4" />
+          <element id="library" level="application" name="Thymeleaf 3.0.3" />
+          <element id="library" level="application" name="Java Mail" />
+          <element id="library" level="application" name="Jackson Json 2.8.5" />
+          <element id="library" level="application" name="Hibernate 5.2.5" />
+          <element id="library" level="application" name="Jasper Reports 6.3.1" />
+          <element id="library" level="application" name="Postgresql 9.4" />
+          <element id="library" level="application" name="Spring Data JPA 1.10.5" />
+          <element id="library" level="application" name="Spring Security 4.2.1" />
+          <element id="library" level="application" name="Spring Framework 4.3.4" />
         </element>
       </element>
     </root>
