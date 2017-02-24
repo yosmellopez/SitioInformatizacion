@@ -4,13 +4,21 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="bloques :: common_header(~{::title})">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Inicio | Sitio Informatizacion</title>
     </head>
-    <body>
-        <div>TODO write content</div>
+    <body  id="page-top" data-spy="scroll" data-target=".navbar-custom">
+        <div id="wrapper">
+            <div th:insert="~{bloques :: navegacion}"></div>
+            <div th:insert="~{bloques :: introduccion}"></div>
+            <div th:insert="~{bloques :: resoluciones}"></div>
+            <div th:insert="~{bloques :: nuestroservicios}"></div>
+            <div th:insert="~{bloques :: videos}"></div>
+            <div th:insert="~{bloques :: testimonial}"></div>
+            <div th:insert="~{bloques :: footer}"></div>
+        </div>
     </body>
 </html>
+

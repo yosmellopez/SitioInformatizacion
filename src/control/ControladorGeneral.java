@@ -31,31 +31,37 @@ import utiles.BloqueTrabajador;
 
 @Controller
 public class ControladorGeneral {
-    
+
     @Autowired
     UsuarioJpa usuarioJpa;
-    
+
     @Autowired
     ServicioJpa servicioJpa;
-    
+
     @Autowired
     VideoJpa videoJpa;
-    
+
     @Autowired
     ResolucionJpa resolucionJpa;
-    
+
     @Autowired
     TrabajadorJpa trabajadorJpa;
-    
+
     @Autowired
     MapeadorObjetos mapeadorObjetos;
-    
+
     @RequestMapping(value = "/{pagina}.html")
     public ModelAndView paginaRouter(@PathVariable String pagina, ModelMap map) {
         map.put("pagina", pagina);
         return new ModelAndView(pagina, map);
     }
-    
+
+    @RequestMapping(value = "/{id}/{pagina}.html")
+    public ModelAndView paginaRouter(@PathVariable Integer id, @PathVariable String pagina, ModelMap map) {
+        map.put("pagina", pagina);
+        return new ModelAndView(pagina, map);
+    }
+
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
     public ModelAndView index(ModelMap modelMap) {
         modelMap.put("serviciosGenerales", servicioJpa.findAll(new PageRequest(0, 4)));
@@ -67,14 +73,14 @@ public class ControladorGeneral {
         modelMap.put("videos", videoJpa.findAll());
         return new ModelAndView("index", modelMap);
     }
-    
+
     @RequestMapping(value = "/denegado.html", method = RequestMethod.GET)
     public ModelAndView denegado(@AuthenticationPrincipal Usuario usuario) {
         ModelMap map = new ModelMap();
         llenarMap(map, usuario);
         return new ModelAndView("error/denegado", map);
     }
-    
+
     @RequestMapping(value = "/error404.html")
     public ModelAndView error404Page(ModelMap map) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -91,7 +97,7 @@ public class ControladorGeneral {
         }
         return new ModelAndView("error/error404", map);
     }
-    
+
     @RequestMapping(value = "/errorPage.html")
     @ResponseStatus(HttpStatus.OK)
     public ModelAndView error500Page(ModelMap map, HttpServletRequest request) {
@@ -117,15 +123,15 @@ public class ControladorGeneral {
         map.put("reason", request.getAttribute("javax.servlet.error.exception"));
         return new ModelAndView("error/error500", map);
     }
-    
+
     private boolean contiene(String cadena) {
         return cadena.contains("ministerio") || cadena.contains("universidad") || cadena.contains("modelo") || cadena.contains("doctorado") || cadena.contains("otros") || cadena.contains("programas") || cadena.contains("slider") || cadena.contains("convocatorias");
     }
-    
+
     private void llenarMap(ModelMap map, Usuario usuario) {
         map.put("usuarios", usuarioJpa.count());
     }
-    
+
     private List<BloqueTrabajador> crearBloque(List<Trabajador> trabajadores) {
         List<BloqueTrabajador> bloques = new LinkedList<>();
         int cantidad = trabajadores.size();
