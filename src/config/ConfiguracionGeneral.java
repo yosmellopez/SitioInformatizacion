@@ -2,11 +2,14 @@ package config;
 
 import java.util.Properties;
 import javax.persistence.EntityManagerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.core.env.Environment;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.web.config.EnableSpringDataWebSupport;
@@ -27,7 +30,11 @@ import utiles.ServicioInicio;
 @EnableJpaRepositories(basePackages = {"jpaSpringData"})
 @EnableTransactionManagement
 @EnableSpringDataWebSupport
+@PropertySource(name = "configuracion", value = {"/WEB-INF/configuracion.properties"})
 public class ConfiguracionGeneral {
+    
+    @Autowired
+    Environment environment;
 
     @Bean(name = "dataSource")
     public DriverManagerDataSource dataSource() {
@@ -35,7 +42,7 @@ public class ConfiguracionGeneral {
         driverManagerDataSource.setDriverClassName("org.postgresql.Driver");
         driverManagerDataSource.setUrl("jdbc:postgresql://localhost:5432/informatizacion");
         driverManagerDataSource.setUsername("postgres");
-        driverManagerDataSource.setPassword("postgres");
+        driverManagerDataSource.setPassword(environment.getProperty("password"));
         return driverManagerDataSource;
     }
 

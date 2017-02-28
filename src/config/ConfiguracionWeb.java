@@ -107,6 +107,7 @@ public class ConfiguracionWeb extends WebMvcConfigurerAdapter implements Applica
         resolver.setPrefix("/WEB-INF/vista/");
         resolver.setSuffix(".html");
         resolver.setCacheable(false);
+        resolver.setCharacterEncoding(UTF8);
         resolver.setTemplateMode(TemplateMode.HTML);
         return resolver;
     }
